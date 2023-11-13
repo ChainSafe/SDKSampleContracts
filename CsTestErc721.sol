@@ -33,11 +33,10 @@ contract CsTestErc721 is ERC721, ERC721URIStorage {
     /// @notice Minting ERC20 tokens.
     /// @param _to The address to mint tokens to.
     /// @param _uri The Uri of the token being minted.
-    function safeMint(address _to, string memory _uri) public returns (bool) {
+    function safeMint(address _to, string memory _uri) public {
         uint256 tokenId = _nextTokenId++;
         _safeMint(_to, tokenId);
         _setTokenURI(tokenId, _uri);
-        return true;
     }
 
     /// @dev The following functions are overrides required by Solidity.

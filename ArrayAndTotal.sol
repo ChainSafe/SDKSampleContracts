@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
+
 //  $$$$$$\  $$\   $$\  $$$$$$\  $$$$$$\ $$\   $$\  $$$$$$\   $$$$$$\  $$$$$$$$\ $$$$$$$$\ 
 // $$  __$$\ $$ |  $$ |$$  __$$\ \_$$  _|$$$\  $$ |$$  __$$\ $$  __$$\ $$  _____|$$  _____|
 // $$ /  \__|$$ |  $$ |$$ /  $$ |  $$ |  $$$$\ $$ |$$ /  \__|$$ /  $$ |$$ |      $$ |      
@@ -9,6 +10,7 @@ pragma solidity ^0.8.20;
 // $$ |  $$\ $$ |  $$ |$$ |  $$ |  $$ |  $$ |\$$$ |$$\   $$ |$$ |  $$ |$$ |      $$ |      
 // \$$$$$$  |$$ |  $$ |$$ |  $$ |$$$$$$\ $$ | \$$ |\$$$$$$  |$$ |  $$ |$$ |      $$$$$$$$\ 
 //  \______/ \__|  \__|\__|  \__|\______|\__|  \__| \______/ \__|  \__|\__|      \________|
+
 
 /// @title ChainSafe Test Contract Array & Total
 /// @author Sneakz
@@ -23,20 +25,16 @@ contract ArrayAndTotal {
     /// @dev Adds to the users total
     /// @notice Adding to total
     /// @param _myArg The amount to set the total to
-    /// @return True if successful
-    function addTotal(uint256 _myArg) public returns (bool) {
+    function addTotal(uint256 _myArg) public {
         myTotal[msg.sender] = _myArg;
-        return true;
     }
 
     /// @dev Changes the array values
     /// @notice Changing array values
     /// @param _addresses The addresses to insert into the array
-    /// @return True if successful
-    function setStore(string[] memory _addresses) public returns (bool) {
+    function setStore(string[] memory _addresses) public {
         testArray[0] = _addresses[0];
         testArray[1] = _addresses[1];
-        return true;
     }
 
     /// @dev Returns the array values saved in the contract

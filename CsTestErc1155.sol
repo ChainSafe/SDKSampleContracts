@@ -26,10 +26,8 @@ contract CsTestErc1155 is ERC1155 {
     /// @param _id The token id to mint
     /// @param _amount The amount of tokens being minted
     /// @param _data Data in bytes
-    /// @return True if successful
-    function mint(address _to, uint256 _id, uint256 _amount, bytes memory _data) public returns (bool) {
+    function mint(address _to, uint256 _id, uint256 _amount, bytes memory _data) public {
         _mint(_to, _id, _amount, _data);
-        return true;
     }
 
     /// @dev Mints batches of ERC1155 tokens to an account
@@ -38,9 +36,7 @@ contract CsTestErc1155 is ERC1155 {
     /// @param _ids The token id to mint
     /// @param _amounts The amount of tokens being minted
     /// @param _data Data in bytes
-    /// @return True if successful
-    function mintBatch(address _to, uint256[] memory _ids, uint256[] memory _amounts, bytes memory _data) public returns (bool) {
+    function mintBatch(address _to, uint256[] memory _ids, uint256[] memory _amounts, bytes memory _data) public {
         _mintBatch(_to, _ids, _amounts, _data);
-        return true;
     }
 }

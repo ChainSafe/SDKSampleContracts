@@ -24,9 +24,7 @@ contract CsTestErc20 is ERC20 {
     /// @notice Minting ERC20 tokens
     /// @param _to The address to mint tokens to
     /// @param _amount The amount of tokens to mint
-    /// @return True if successful
-    function mint(address _to, uint256 _amount) public returns (bool) {
+    function mint(address _to, uint256 _amount) public {
         _mint(_to, _amount);
-        return true;
     }
 }
